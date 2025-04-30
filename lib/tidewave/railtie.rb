@@ -20,6 +20,7 @@ module Tidewave
         messages_route: Tidewave::MESSAGES_ROUTE,
         sse_route: Tidewave::SSE_ROUTE,
         allowed_ips: ['127.0.0.1', '::1', '192.164.64.1'],
+        localhost_only: false,
         logger: Logger.new(STDOUT)
       ) do |server|
         app.config.before_initialize do
